@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+  <h1>Index Page</h1>
+  <form action="/emailapp/sendmail/" method="POST">
+  <p>
+	<label for="email">To</label>
+	<input type="email" placeholder="Enter To Email" name="email">
+  </p>
+
+  <p>
+	<label for="email">Subject</label>
+	<input type="text" placeholder="Enter Subject" name="subject">
+  </p>
+
+  <p>
+	<label for="message">Message</label>
+	<textarea name="message"></textarea>
+  </p>
+
+  <p>
+	<input type="submit" value="Send Email">
+  </p>
+  {% csrf_token %}
+  </form>
+ </body>
+</html>
